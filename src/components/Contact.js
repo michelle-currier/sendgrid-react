@@ -2,6 +2,42 @@ import React, { useRef, useState } from "react";
 
 import { Box, Typography, Button, TextField } from "@mui/material";
 
+// function Contact() {
+//   const form = useRef();
+//   const [status, setStatus] = useState("");
+
+//   const sendEmail = (e) => {
+//     e.preventDefault();
+
+//     const formData = new FormData(form.current);
+//     const data = {
+//       from_name: formData.get("from_name"),
+//       email: formData.get("email"),
+//       telephone: formData.get("telephone"),
+//       message: formData.get("message"),
+//     };
+//     // fetch("http://react.mcurrier.com/send-email", {
+//     fetch("http://localhost:5002/send-email", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify(data),
+//     })
+//       .then((response) => response.json())
+//       .then((result) => {
+//         if (result.success) {
+//           setStatus("Email sent successfully!");
+//         } else {
+//           setStatus("Error sending email, debug more.");
+//         }
+//       })
+//       .catch((error) => {
+//         console.error(
+//           "error sending email:",
+//           error.response ? error.response.body : error.message
+//         );
+//       });
+//   };
+
 function Contact() {
   const form = useRef();
   const [status, setStatus] = useState("");
@@ -16,8 +52,8 @@ function Contact() {
       telephone: formData.get("telephone"),
       message: formData.get("message"),
     };
-    // fetch("http://react.mcurrier.com/send-email", {
-    fetch("http://localhost:5002/send-email", {
+
+    fetch("http://localhost:5001/send-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
@@ -40,6 +76,8 @@ function Contact() {
 
   return (
     <>
+      {/* with mui */}
+
       <Box
         component="form"
         ref={form}

@@ -28,10 +28,11 @@ const theme = createTheme({
     h1: {
       fontFamily: "Teko, Arial, sans-serif",
       color: "#2196F3",
-      textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
+      textShadow: "2px 2px 4px rgba(0, 0, 0, 0.65)",
     },
     h2: {
       fontFamily: "Teko, Arial, sans-serif",
+      textShadow: "2px 2px 4px rgba(0, 0, 0, 0.85)",
     },
     h3: {
       fontFamily: "Teko, Arial, sans-serif",
